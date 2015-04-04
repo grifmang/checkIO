@@ -1,18 +1,18 @@
 def left_join(phrases):
     result = []
     
-	for element in phrases:
+    for element in phrases:
         
-		if 'right' in element:
+        if 'right' in element:
             change = element.replace('right', 'left')
             result.append(change)
         
-		else:
+        else:
             result.append(element)
     
-	result = ','.join(result)
+    result = ','.join(result)
     
-	return result
+    return result
 ​
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
