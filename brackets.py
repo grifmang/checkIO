@@ -4,16 +4,16 @@ def checkio(expression):
     bracketClose = {y: x for x, y in brackets}
     result = []
     
-	for char in expression:
+    for char in expression:
         
-		if char in bracketOpen:
+        if char in bracketOpen:
             result.append(char)
         
-		elif char in bracketClose:
+        elif char in bracketClose:
         
-			if not result or result[-1] != bracketClose[char]:
+            if not result or result[-1] != bracketClose[char]:
                 return False
             
-			result.pop()
-			
+            result.pop()
+
     return not result
