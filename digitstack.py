@@ -4,36 +4,36 @@ def digit_stack(commands):
     newCMD = []
     answer = 0
     
-	for entry in commands:
+    for entry in commands:
         newCMD.append(entry.split())
     
-	for element in newCMD:
+    for element in newCMD:
         
-		if element[0] == 'PUSH':
+        if element[0] == 'PUSH':
             stack.append(element[1])
         
-		elif element[0] == 'PEEK':
+        elif element[0] == 'PEEK':
             
-			if len(stack) == 0:
+            if len(stack) == 0:
                 continue
             
-			else:
+            else:
                 spot = len(stack)
                 newChar = stack[spot-1]
                 result.append(newChar)
         
-		elif element[0] == 'POP':
+        elif element[0] == 'POP':
             
-			if len(stack) == 0:
+            if len(stack) == 0:
                 continue
             
-			else:
+            else:
                 spot = len(stack)
                 newChar = stack[spot-1]
                 result.append(newChar)
                 stack.pop()
     
-	for digit in result:
+    for digit in result:
         answer = int(answer) + int(digit)
     
-	return answer
+    return answer
